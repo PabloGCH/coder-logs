@@ -1,0 +1,977 @@
+Statistical profiling result from isolate-0x65ce640-20939-v8.log, (4792 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   4033   84.2%          /usr/local/bin/node
+     98    2.0%          /usr/lib/libc.so.6
+      3    0.1%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     14    0.3%    2.1%  LazyCompile: *resolve node:path:1091:10
+     13    0.3%    2.0%  LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      5    0.1%    0.8%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      4    0.1%    0.6%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      3    0.1%    0.5%  LazyCompile: *parse /home/pablo/curso/coder-logs/node_modules/vary/index.js:96:16
+      3    0.1%    0.5%  LazyCompile: *emit node:events:460:44
+      3    0.1%    0.5%  Function: ^error /home/pablo/curso/coder-logs/node_modules/serve-static/index.js:115:39
+      3    0.1%    0.5%  Function: ^Module._nodeModulePaths node:internal/modules/cjs/loader:640:37
+      2    0.0%    0.3%  RegExp: y{1,4}
+      2    0.0%    0.3%  LazyCompile: *validateString node:internal/validators:119:24
+      2    0.0%    0.3%  LazyCompile: *readPackageScope node:internal/modules/cjs/loader:332:26
+      2    0.0%    0.3%  LazyCompile: *dirname node:path:1275:10
+      2    0.0%    0.3%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:640:37
+      2    0.0%    0.3%  Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      2    0.0%    0.3%  Function: ^setCharset /home/pablo/curso/coder-logs/node_modules/express/lib/utils.js:248:41
+      2    0.0%    0.3%  Function: ^session /home/pablo/curso/coder-logs/node_modules/express-session/index.js:179:26
+      2    0.0%    0.3%  Function: ^send /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:111:25
+      2    0.0%    0.3%  Function: ^readFileSync node:fs:459:22
+      2    0.0%    0.3%  Function: ^randomFillSync node:internal/crypto/random:113:24
+      2    0.0%    0.3%  Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      2    0.0%    0.3%  Function: ^initialize /home/pablo/curso/coder-logs/node_modules/passport/lib/middleware/initialize.js:51:29
+      2    0.0%    0.3%  Function: ^hasObserver node:internal/perf/observe:460:21
+      2    0.0%    0.3%  Function: ^hasHooks node:internal/async_hooks:470:18
+      2    0.0%    0.3%  Function: ^getHeader node:_http_outgoing:647:57
+      2    0.0%    0.3%  Function: ^getEncodingOps node:buffer:684:24
+      2    0.0%    0.3%  Function: ^get node:internal/streams/duplex:97:8
+      2    0.0%    0.3%  Function: ^fastparse /home/pablo/curso/coder-logs/node_modules/parseurl/index.js:95:20
+      2    0.0%    0.3%  Function: ^etag /home/pablo/curso/coder-logs/node_modules/etag/index.js:70:15
+      2    0.0%    0.3%  Function: ^emit node:events:460:44
+      2    0.0%    0.3%  Function: ^dispatch /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:98:45
+      2    0.0%    0.3%  Function: ^deserializeObject /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/deserializer.js:65:27
+      2    0.0%    0.3%  Function: ^configForCategory /home/pablo/curso/coder-logs/node_modules/log4js/lib/categories.js:173:27
+      2    0.0%    0.3%  Function: ^clearBuffer node:internal/streams/writable:531:21
+      2    0.0%    0.3%  Function: ^_write node:internal/streams/writable:285:16
+      2    0.0%    0.3%  Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2    0.0%    0.3%  Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2    0.0%    0.3%  Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      2    0.0%    0.3%  Function: ^Hash node:internal/crypto/hash:62:14
+      1    0.0%    0.2%  RegExp: ^[a-zA-Z_][a-zA-Z_0-9]*$
+      1    0.0%    0.2%  RegExp: ^[!#$%&'*+\-.^_`|~0-9A-Za-z]+$
+      1    0.0%    0.2%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.2%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.2%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.2%  RegExp: SSS
+      1    0.0%    0.2%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      1    0.0%    0.2%  LazyCompile: *writeOrBuffer node:internal/streams/writable:367:23
+      1    0.0%    0.2%  LazyCompile: *realpathSync node:fs:2460:22
+      1    0.0%    0.2%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    0.2%  LazyCompile: *normalizeString node:path:66:25
+      1    0.0%    0.2%  LazyCompile: *getValidatedString /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/deserializer.js:650:28
+      1    0.0%    0.2%  LazyCompile: *getEncodingOps node:buffer:684:24
+      1    0.0%    0.2%  LazyCompile: *get node:internal/streams/duplex:97:8
+      1    0.0%    0.2%  LazyCompile: *formatWithOptionsInternal node:internal/util/inspect:2122:35
+      1    0.0%    0.2%  LazyCompile: *_storeHeader node:_http_outgoing:384:22
+      1    0.0%    0.2%  LazyCompile: *_addListener node:events:541:22
+      1    0.0%    0.2%  LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1    0.0%    0.2%  Function: ^write node:buffer:598:12
+      1    0.0%    0.2%  Function: ^value node:internal/console/constructor:336:20
+      1    0.0%    0.2%  Function: ^validateNumber node:internal/validators:124:24
+      1    0.0%    0.2%  Function: ^store.generate /home/pablo/curso/coder-logs/node_modules/express-session/index.js:158:28
+      1    0.0%    0.2%  Function: ^shift node:internal/fixed_queue:80:8
+      1    0.0%    0.2%  Function: ^setHeader node:_http_outgoing:601:57
+      1    0.0%    0.2%  Function: ^set /home/pablo/curso/coder-logs/node_modules/express/lib/application.js:359:23
+      1    0.0%    0.2%  Function: ^resume_ node:internal/streams/readable:984:17
+      1    0.0%    0.2%  Function: ^resolve node:path:1091:10
+      1    0.0%    0.2%  Function: ^remove node:internal/linkedlist:16:16
+      1    0.0%    0.2%  Function: ^readableAddChunk node:internal/streams/readable:236:26
+      1    0.0%    0.2%  Function: ^readSync node:fs:699:18
+      1    0.0%    0.2%  Function: ^randomBytes node:internal/crypto/random:93:21
+      1    0.0%    0.2%  Function: ^query /home/pablo/curso/coder-logs/node_modules/express/lib/middleware/query.js:39:24
+      1    0.0%    0.2%  Function: ^qstring /home/pablo/curso/coder-logs/node_modules/content-type/index.js:200:18
+      1    0.0%    0.2%  Function: ^pushAsyncContext node:internal/async_hooks:539:26
+      1    0.0%    0.2%  Function: ^parserOnIncoming node:_http_server:880:26
+      1    0.0%    0.2%  Function: ^parseExtendedQueryString /home/pablo/curso/coder-logs/node_modules/express/lib/utils.js:289:34
+      1    0.0%    0.2%  Function: ^openSync node:fs:585:18
+      1    0.0%    0.2%  Function: ^onwrite node:internal/streams/writable:427:17
+      1    0.0%    0.2%  Function: ^onstat /home/pablo/curso/coder-logs/node_modules/send/index.js:717:33
+      1    0.0%    0.2%  Function: ^onParserExecuteCommon node:_http_server:719:31
+      1    0.0%    0.2%  Function: ^normalizeString node:path:66:25
+      1    0.0%    0.2%  Function: ^nextTick node:internal/process/task_queues:104:18
+      1    0.0%    0.2%  Function: ^next /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:116:16
+      1    0.0%    0.2%  Function: ^next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      1    0.0%    0.2%  Function: ^matchKnownFields node:_http_incoming:276:26
+      1    0.0%    0.2%  Function: ^makeRequireFunction node:internal/modules/cjs/helpers:58:29
+      1    0.0%    0.2%  Function: ^log node:internal/console/constructor:375:6
+      1    0.0%    0.2%  Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1    0.0%    0.2%  Function: ^listenerCount node:events:840:23
+      1    0.0%    0.2%  Function: ^jsonParser /home/pablo/curso/coder-logs/node_modules/body-parser/lib/types/json.js:98:30
+      1    0.0%    0.2%  Function: ^json /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:250:25
+      1    0.0%    0.2%  Function: ^isstats /home/pablo/curso/coder-logs/node_modules/etag/index.js:104:18
+      1    0.0%    0.2%  Function: ^isModified /home/pablo/curso/coder-logs/node_modules/express-session/index.js:425:24
+      1    0.0%    0.2%  Function: ^isMaster /home/pablo/curso/coder-logs/node_modules/log4js/lib/clustering.js:21:18
+      1    0.0%    0.2%  Function: ^inspect node:internal/util/inspect:295:17
+      1    0.0%    0.2%  Function: ^initHooksExist node:internal/async_hooks:478:24
+      1    0.0%    0.2%  Function: ^header /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:777:29
+      1    0.0%    0.2%  Function: ^hasListeners /home/pablo/curso/coder-logs/node_modules/send/index.js:1031:23
+      1    0.0%    0.2%  Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/application.js:165:29
+      1    0.0%    0.2%  Function: ^getTimerDuration node:internal/timers:383:26
+      1    0.0%    0.2%  Function: ^getKeys node:internal/util/inspect:693:17
+      1    0.0%    0.2%  Function: ^getConstructorName node:internal/util/inspect:572:28
+      1    0.0%    0.2%  Function: ^getColorDepth node:internal/tty:106:23
+      1    0.0%    0.2%  Function: ^get node:net:1847:6
+      1    0.0%    0.2%  Function: ^get node:internal/console/constructor:208:14
+      1    0.0%    0.2%  Function: ^fromStringFast node:buffer:418:24
+      1    0.0%    0.2%  Function: ^formatRaw node:internal/util/inspect:828:19
+      1    0.0%    0.2%  Function: ^formatProperty node:internal/util/inspect:1883:24
+      1    0.0%    0.2%  Function: ^formatPrimitive node:internal/util/inspect:1590:25
+      1    0.0%    0.2%  Function: ^finalhandler /home/pablo/curso/coder-logs/node_modules/finalhandler/index.js:77:23
+      1    0.0%    0.2%  Function: ^extname node:path:1385:10
+      1    0.0%    0.2%  Function: ^end node:_http_outgoing:912:45
+      1    0.0%    0.2%  Function: ^end /home/pablo/curso/coder-logs/node_modules/express-session/index.js:250:27
+      1    0.0%    0.2%  Function: ^end /home/pablo/curso/coder-logs/node_modules/compression/index.js:92:28
+      1    0.0%    0.2%  Function: ^enabledHooksExist node:internal/async_hooks:474:27
+      1    0.0%    0.2%  Function: ^emitReadable node:internal/streams/readable:563:22
+      1    0.0%    0.2%  Function: ^createHash node:crypto:129:20
+      1    0.0%    0.2%  Function: ^createError /home/pablo/curso/coder-logs/node_modules/http-errors/index.js:49:22
+      1    0.0%    0.2%  Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    0.0%    0.2%  Function: ^clearTimeout node:timers:185:22
+      1    0.0%    0.2%  Function: ^checkIsHttpToken node:_http_common:220:26
+      1    0.0%    0.2%  Function: ^checkInvalidHeaderChar node:_http_common:231:32
+      1    0.0%    0.2%  Function: ^app.<computed> /home/pablo/curso/coder-logs/node_modules/express/lib/application.js:490:25
+      1    0.0%    0.2%  Function: ^afterWriteTick node:internal/streams/writable:484:24
+      1    0.0%    0.2%  Function: ^addListener node:events:604:58
+      1    0.0%    0.2%  Function: ^_writeRaw node:_http_outgoing:354:19
+      1    0.0%    0.2%  Function: ^_storeHeader node:_http_outgoing:384:22
+      1    0.0%    0.2%  Function: ^_dump node:_http_incoming:419:49
+      1    0.0%    0.2%  Function: ^_addListener node:events:541:22
+      1    0.0%    0.2%  Function: ^Timeout.refresh node:internal/timers:210:37
+      1    0.0%    0.2%  Function: ^Timeout node:internal/timers:167:17
+      1    0.0%    0.2%  Function: ^SessionStrategy.authenticate /home/pablo/curso/coder-logs/node_modules/passport/lib/strategies/session.js:45:50
+      1    0.0%    0.2%  Function: ^ReadableState node:internal/streams/readable:78:23
+      1    0.0%    0.2%  Function: ^Readable.on node:internal/streams/readable:874:33
+      1    0.0%    0.2%  Function: ^Long.greaterThanOrEqual /home/pablo/curso/coder-logs/node_modules/bson/lib/long.js:477:50
+      1    0.0%    0.2%  Function: ^<anonymous> node:internal/validators:245:42
+      1    0.0%    0.2%  Function: ^<anonymous> node:internal/fs/utils:671:38
+      1    0.0%    0.2%  Function: ^<anonymous> node:internal/console/constructor:355:10
+      1    0.0%    0.2%  Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:280:64
+
+ [C++]:
+   ticks  total  nonlib   name
+    146    3.0%   22.2%  epoll_pwait@@GLIBC_2.6
+    115    2.4%   17.5%  __write@@GLIBC_2.2.5
+     35    0.7%    5.3%  fwrite@@GLIBC_2.2.5
+     25    0.5%    3.8%  pthread_cond_signal@@GLIBC_2.3.2
+     14    0.3%    2.1%  _IO_file_xsputn@@GLIBC_2.2.5
+     12    0.3%    1.8%  syscall@@GLIBC_2.2.5
+     12    0.3%    1.8%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     12    0.3%    1.8%  __read@@GLIBC_2.2.5
+     11    0.2%    1.7%  __mprotect@@GLIBC_PRIVATE
+      9    0.2%    1.4%  std::ostream::sentry::sentry(std::ostream&)
+      8    0.2%    1.2%  cfree@GLIBC_2.2.5
+      6    0.1%    0.9%  __libc_malloc@@GLIBC_2.2.5
+      4    0.1%    0.6%  int std::__int_to_char<char, unsigned long>(char*, unsigned long, char const*, std::_Ios_Fmtflags, bool)
+      4    0.1%    0.6%  __pthread_mutex_lock@GLIBC_2.2.5
+      3    0.1%    0.5%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      3    0.1%    0.5%  std::ostream::flush()
+      3    0.1%    0.5%  __errno_location@@GLIBC_2.2.5
+      2    0.0%    0.3%  std::ostream::operator<<(int)
+      2    0.0%    0.3%  std::ostream& std::ostream::_M_insert<long>(long)
+      2    0.0%    0.3%  accept4@@GLIBC_2.10
+      2    0.0%    0.3%  __pthread_mutex_unlock@GLIBC_2.2.5
+      2    0.0%    0.3%  __lll_lock_wait_private@@GLIBC_PRIVATE
+      1    0.0%    0.2%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const
+      1    0.0%    0.2%  std::ostream::put(char)
+      1    0.0%    0.2%  std::locale::id::_M_id() const
+      1    0.0%    0.2%  std::__use_cache<std::__numpunct_cache<char> >::operator()(std::locale const&) const [clone .isra.0]
+      1    0.0%    0.2%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+      1    0.0%    0.2%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      1    0.0%    0.2%  shutdown@@GLIBC_2.2.5
+      1    0.0%    0.2%  operator delete[](void*)
+      1    0.0%    0.2%  operator delete(void*)
+      1    0.0%    0.2%  getrusage@@GLIBC_2.2.5
+      1    0.0%    0.2%  epoll_ctl@@GLIBC_2.3.2
+      1    0.0%    0.2%  __pthread_rwlock_wrlock@GLIBC_2.2.5
+      1    0.0%    0.2%  __pthread_getspecific@GLIBC_2.2.5
+      1    0.0%    0.2%  __munmap@@GLIBC_PRIVATE
+      1    0.0%    0.2%  __mmap@@GLIBC_PRIVATE
+      1    0.0%    0.2%  __clock_gettime@@GLIBC_PRIVATE
+      1    0.0%    0.2%  _IO_setb@@GLIBC_2.2.5
+      1    0.0%    0.2%  _IO_file_write@@GLIBC_2.2.5
+      1    0.0%    0.2%  _IO_file_sync@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+    207    4.3%   31.5%  JavaScript
+    451    9.4%   68.5%  C++
+    236    4.9%   35.9%  GC
+   4134   86.3%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     91   41.6%    1.9%  __write@@GLIBC_2.2.5
+     33   15.1%    0.7%  fwrite@@GLIBC_2.2.5
+     14    6.4%    0.3%  _IO_file_xsputn@@GLIBC_2.2.5
+     12    5.5%    0.3%  syscall@@GLIBC_2.2.5
+     12    5.5%    0.3%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      9    4.1%    0.2%  std::ostream::sentry::sentry(std::ostream&)
+      7    3.2%    0.1%  cfree@GLIBC_2.2.5
+      6    2.7%    0.1%  __mprotect@@GLIBC_PRIVATE
+      4    1.8%    0.1%  int std::__int_to_char<char, unsigned long>(char*, unsigned long, char const*, std::_Ios_Fmtflags, bool)
+      4    1.8%    0.1%  __libc_malloc@@GLIBC_2.2.5
+      3    1.4%    0.1%  std::ostream::flush()
+      3    1.4%    0.1%  __pthread_mutex_lock@GLIBC_2.2.5
+      2    0.9%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      2    0.9%    0.0%  std::ostream::operator<<(int)
+      2    0.9%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)
+      2    0.9%    0.0%  __pthread_mutex_unlock@GLIBC_2.2.5
+      2    0.9%    0.0%  __errno_location@@GLIBC_2.2.5
+      1    0.5%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const
+      1    0.5%    0.0%  std::locale::id::_M_id() const
+      1    0.5%    0.0%  std::__use_cache<std::__numpunct_cache<char> >::operator()(std::locale const&) const [clone .isra.0]
+      1    0.5%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      1    0.5%    0.0%  pthread_cond_signal@@GLIBC_2.3.2
+      1    0.5%    0.0%  operator delete[](void*)
+      1    0.5%    0.0%  operator delete(void*)
+      1    0.5%    0.0%  __pthread_getspecific@GLIBC_2.2.5
+      1    0.5%    0.0%  _IO_setb@@GLIBC_2.2.5
+      1    0.5%    0.0%  _IO_file_write@@GLIBC_2.2.5
+      1    0.5%    0.0%  _IO_file_sync@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   4033   84.2%  /usr/local/bin/node
+   2642   65.5%    /usr/local/bin/node
+    696   26.3%      Function: ^compileFunction node:vm:316:25
+    692   99.4%        Function: ^wrapSafe node:internal/modules/cjs/loader:1040:18
+    689   99.6%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+    677   98.3%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+     12    1.7%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+    106    4.0%      Function: ^<anonymous> /home/pablo/curso/coder-logs/dist/router.js:113:59
+    106  100.0%        Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+    106  100.0%          Function: ^next /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:116:16
+    106  100.0%            Function: ^compression /home/pablo/curso/coder-logs/node_modules/compression/index.js:59:31
+    104    3.9%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     88   84.6%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      9   10.2%          Function: ~<anonymous> node:http:1:1
+      9  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      9   10.2%          Function: ~<anonymous> node:crypto:1:1
+      9  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      6    6.8%          Function: ~<anonymous> node:tls:1:1
+      6  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      6    6.8%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      6  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      6    6.8%          Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      6  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    5.7%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    5.7%          Function: ~<anonymous> node:_http_client:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    4.5%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    4.5%          Function: ~<anonymous> node:internal/child_process:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    3.4%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    3.4%          Function: ~<anonymous> node:child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.3%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      2  100.0%            LazyCompile: ~get node:crypto:294:8
+      2    2.3%          LazyCompile: ~lazyLoadStreams node:fs:2893:25
+      2  100.0%            LazyCompile: ~get ReadStream node:fs:3036:17
+      2    2.3%          LazyCompile: ~get node:dns:415:8
+      2  100.0%            /usr/local/bin/node
+      2    2.3%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.3%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.3%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.3%          Function: ~<anonymous> node:dns:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.3%          Function: ~<anonymous> node:cluster:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.3%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          LazyCompile: ~get BlockList node:net:1920:16
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      1    1.1%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     13   12.5%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+     13  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+     13  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      3    2.9%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      2   66.7%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      2  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1   33.3%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+    103    3.9%      /usr/local/bin/node
+     11   10.7%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+     11  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      7   63.6%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      4   36.4%            Function: ^trySelf node:internal/modules/cjs/loader:452:17
+      9    8.7%        Function: ^asString /home/pablo/curso/coder-logs/node_modules/date-format/lib/index.js:29:18
+      9  100.0%          Function: ^timestampLevelAndCategory /home/pablo/curso/coder-logs/node_modules/log4js/lib/layouts.js:42:35
+      9  100.0%            Function: ^colouredLayout /home/pablo/curso/coder-logs/node_modules/log4js/lib/layouts.js:73:24
+      8    7.8%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      4   50.0%          Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      4  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:411:23
+      4   50.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      4  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      7    6.8%        Function: ^header /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:777:29
+      5   71.4%          Function: ^json /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:250:25
+      5  100.0%            Function: ^send /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:111:25
+      2   28.6%          Function: ^send /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:111:25
+      2  100.0%            Function: ^json /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:250:25
+      7    6.8%        Function: ^checkInvalidHeaderChar node:_http_common:231:32
+      7  100.0%          Function: ^<anonymous> node:_http_outgoing:577:45
+      7  100.0%            Function: ^setHeader node:_http_outgoing:601:57
+      4    3.9%        Function: ^compressible /home/pablo/curso/coder-logs/node_modules/compressible/index.js:41:23
+      4  100.0%          Function: ^shouldCompress /home/pablo/curso/coder-logs/node_modules/compression/index.js:254:25
+      4  100.0%            Function: ^onResponseHeaders /home/pablo/curso/coder-logs/node_modules/compression/index.js:140:47
+      4    3.9%        Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      4  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      4  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      3    2.9%        Function: ^pipe /home/pablo/curso/coder-logs/node_modules/send/index.js:506:43
+      3  100.0%          Function: ^serveStatic /home/pablo/curso/coder-logs/node_modules/serve-static/index.js:72:31
+      2   66.7%            Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      1   33.3%            LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      3    2.9%        Function: ^normalize node:path:1127:12
+      2   66.7%          Function: ^pipe /home/pablo/curso/coder-logs/node_modules/send/index.js:506:43
+      2  100.0%            Function: ^serveStatic /home/pablo/curso/coder-logs/node_modules/serve-static/index.js:72:31
+      1   33.3%          Function: ^join node:path:1166:7
+      1  100.0%            Function: ^pipe /home/pablo/curso/coder-logs/node_modules/send/index.js:506:43
+      3    2.9%        Function: ^format /home/pablo/curso/coder-logs/node_modules/content-type/index.js:65:17
+      3  100.0%          Function: ^setCharset /home/pablo/curso/coder-logs/node_modules/express/lib/utils.js:248:41
+      3  100.0%            Function: ^send /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:111:25
+      3    2.9%        Function: ^<anonymous> /home/pablo/curso/coder-logs/dist/router.js:113:59
+      3  100.0%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            Function: ^next /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:116:16
+      2    1.9%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:499:36
+      2  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      2  100.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      2    1.9%        LazyCompile: *setHeader node:_http_outgoing:601:57
+      2  100.0%          Function: ^header /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:777:29
+      2  100.0%            Function: ^json /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:250:25
+      2    1.9%        Function: ^expressInit /home/pablo/curso/coder-logs/node_modules/express/lib/middleware/init.js:29:30
+      1   50.0%          LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      1   50.0%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      2    1.9%        Function: ^Module node:internal/modules/cjs/loader:172:16
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+     94    3.6%      Function: ^initialize /home/pablo/curso/coder-logs/node_modules/passport/lib/middleware/initialize.js:51:29
+     59   62.8%        Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+     59  100.0%          Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+     51   86.4%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      8   13.6%            Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:280:64
+     35   37.2%        LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+     35  100.0%          LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+     35  100.0%            Function: ^session /home/pablo/curso/coder-logs/node_modules/express-session/index.js:179:26
+     76    2.9%      Function: ^cookieParser /home/pablo/curso/coder-logs/node_modules/cookie-parser/index.js:44:32
+     45   59.2%        Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+     45  100.0%          Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+     36   80.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      9   20.0%            Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:280:64
+     31   40.8%        LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+     31  100.0%          LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+     31  100.0%            Function: ^<anonymous> /home/pablo/curso/coder-logs/dist/router.js:43:13
+     73    2.8%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     73  100.0%        Function: ^Socket._writeGeneric node:net:848:42
+     73  100.0%          Function: ^Socket._writev node:net:880:36
+     73  100.0%            Function: ^doWrite node:internal/streams/writable:400:17
+     49    1.9%      Function: ^session /home/pablo/curso/coder-logs/node_modules/express-session/index.js:179:26
+     33   67.3%        Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+     33  100.0%          Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+     26   78.8%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      7   21.2%            Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:280:64
+     16   32.7%        LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+     16  100.0%          LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+     16  100.0%            Function: ^cookieParser /home/pablo/curso/coder-logs/node_modules/cookie-parser/index.js:44:32
+     40    1.5%      LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+     14   35.0%        Function: ^strategy.pass /home/pablo/curso/coder-logs/node_modules/passport/lib/middleware/authenticate.js:345:31
+     14  100.0%          Function: ^SessionStrategy.authenticate /home/pablo/curso/coder-logs/node_modules/passport/lib/strategies/session.js:45:50
+     14  100.0%            Function: ^attempt /home/pablo/curso/coder-logs/node_modules/passport/lib/middleware/authenticate.js:180:22
+      8   20.0%        Function: ^error /home/pablo/curso/coder-logs/node_modules/serve-static/index.js:115:39
+      5   62.5%          LazyCompile: *emit node:events:460:44
+      5  100.0%            Function: ^error /home/pablo/curso/coder-logs/node_modules/send/index.js:267:45
+      3   37.5%          Function: ^emit node:events:460:44
+      3  100.0%            Function: ^error /home/pablo/curso/coder-logs/node_modules/send/index.js:267:45
+      7   17.5%        Function: ^cookieParser /home/pablo/curso/coder-logs/node_modules/cookie-parser/index.js:44:32
+      6   85.7%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      6  100.0%            Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1   14.3%          LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      4   10.0%        Function: ^jsonParser /home/pablo/curso/coder-logs/node_modules/body-parser/lib/types/json.js:98:30
+      3   75.0%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1   25.0%          LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      3    7.5%        Function: ^session /home/pablo/curso/coder-logs/node_modules/express-session/index.js:179:26
+      2   66.7%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1   33.3%          LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      3    7.5%        Function: ^initialize /home/pablo/curso/coder-logs/node_modules/passport/lib/middleware/initialize.js:51:29
+      2   66.7%          LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      2  100.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      1   33.3%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1    2.5%        Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:136:31
+      1  100.0%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/application.js:165:29
+      1  100.0%            Function: ^app /home/pablo/curso/coder-logs/node_modules/express/lib/express.js:38:21
+     40    1.5%      Function: ^Hash node:internal/crypto/hash:62:14
+     40  100.0%        Function: ^createHash node:crypto:129:20
+     24   60.0%          Function: ^hash /home/pablo/curso/coder-logs/node_modules/express-session/index.js:596:14
+     13   54.2%            Function: ^generate /home/pablo/curso/coder-logs/node_modules/express-session/index.js:363:22
+     11   45.8%            Function: ^isModified /home/pablo/curso/coder-logs/node_modules/express-session/index.js:425:24
+     16   40.0%          Function: ^entitytag /home/pablo/curso/coder-logs/node_modules/etag/index.js:39:20
+     16  100.0%            Function: ^etag /home/pablo/curso/coder-logs/node_modules/etag/index.js:70:15
+     36    1.4%      Function: ^stat node:internal/modules/cjs/loader:151:14
+     20   55.6%        Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+     18   90.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+     18  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2   10.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+     16   44.4%        Function: ^tryFile node:internal/modules/cjs/loader:395:17
+     15   93.8%          Function: ^tryExtensions node:internal/modules/cjs/loader:411:23
+     12   80.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2   13.3%            Function: ^tryPackage node:internal/modules/cjs/loader:349:20
+      1    6.7%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:349:20
+      1    6.3%          Function: ^tryPackage node:internal/modules/cjs/loader:349:20
+      1  100.0%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+     36    1.4%      Function: ^compression /home/pablo/curso/coder-logs/node_modules/compression/index.js:59:31
+     36  100.0%        Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+     36  100.0%          Function: ^next /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:116:16
+     36  100.0%            Function: ^dispatch /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:98:45
+     35    1.3%      Function: ^randomFillSync node:internal/crypto/random:113:24
+     35  100.0%        Function: ^randomBytes node:internal/crypto/random:93:21
+     34   97.1%          Function: ^randomBytesSync /home/pablo/curso/coder-logs/node_modules/random-bytes/index.js:72:25
+     34  100.0%            Function: ^uidSync /home/pablo/curso/coder-logs/node_modules/uid-safe/index.js:75:18
+      1    2.9%          LazyCompile: ~randomBytesSync /home/pablo/curso/coder-logs/node_modules/random-bytes/index.js:72:25
+      1  100.0%            Function: ^uidSync /home/pablo/curso/coder-logs/node_modules/uid-safe/index.js:75:18
+     29    1.1%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     29  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     20   69.0%          Function: ^Socket._writeGeneric node:net:848:42
+     20  100.0%            Function: ^Socket._write node:net:885:35
+      9   31.0%          LazyCompile: *writeOrBuffer node:internal/streams/writable:367:23
+      5   55.6%            LazyCompile: *_write node:internal/streams/writable:285:16
+      4   44.4%            Function: ^_write node:internal/streams/writable:285:16
+     28    1.1%      Function: ^stat node:fs:1504:14
+     28  100.0%        Function: ^sendFile /home/pablo/curso/coder-logs/node_modules/send/index.js:712:51
+     25   89.3%          Function: ^pipe /home/pablo/curso/coder-logs/node_modules/send/index.js:506:43
+     25  100.0%            Function: ^serveStatic /home/pablo/curso/coder-logs/node_modules/serve-static/index.js:72:31
+      3   10.7%          LazyCompile: ~pipe /home/pablo/curso/coder-logs/node_modules/send/index.js:506:43
+      2   66.7%            LazyCompile: ~serveStatic /home/pablo/curso/coder-logs/node_modules/serve-static/index.js:72:31
+      1   33.3%            Function: ^serveStatic /home/pablo/curso/coder-logs/node_modules/serve-static/index.js:72:31
+     27    1.0%      Function: ^hash /home/pablo/curso/coder-logs/node_modules/express-session/index.js:596:14
+     18   66.7%        Function: ^isModified /home/pablo/curso/coder-logs/node_modules/express-session/index.js:425:24
+     15   83.3%          Function: ^shouldSetCookie /home/pablo/curso/coder-logs/node_modules/express-session/index.js:464:29
+     15  100.0%            Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/express-session/index.js:220:28
+      3   16.7%          Function: ^shouldSave /home/pablo/curso/coder-logs/node_modules/express-session/index.js:440:24
+      3  100.0%            Function: ^end /home/pablo/curso/coder-logs/node_modules/express-session/index.js:250:27
+      9   33.3%        Function: ^generate /home/pablo/curso/coder-logs/node_modules/express-session/index.js:363:22
+      9  100.0%          Function: ^session /home/pablo/curso/coder-logs/node_modules/express-session/index.js:179:26
+      6   66.7%            Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      3   33.3%            LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+
+    146    3.0%  epoll_pwait@@GLIBC_2.6
+
+    115    2.4%  __write@@GLIBC_2.2.5
+     91   79.1%    /usr/local/bin/node
+      8    8.8%      /usr/local/bin/node
+      1   12.5%        LazyCompile: ~parseOptions /home/pablo/curso/coder-logs/node_modules/mongodb/lib/connection_string.js:195:22
+      1  100.0%          LazyCompile: ~MongoClient /home/pablo/curso/coder-logs/node_modules/mongodb/lib/mongo_client.js:43:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/connection.js:799:31
+      1   12.5%        LazyCompile: ~module.exports /home/pablo/curso/coder-logs/node_modules/set-blocking/index.js:1:27
+      1  100.0%          Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/npmlog/log.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1   12.5%        LazyCompile: ~URLStateMachine /home/pablo/curso/coder-logs/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%          LazyCompile: ~module.exports.basicURLParse /home/pablo/curso/coder-logs/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%            LazyCompile: ~URLImpl /home/pablo/curso/coder-logs/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1   12.5%        LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%          LazyCompile: ~Socket node:net:294:16
+      1  100.0%            LazyCompile: ~WriteStream node:tty:85:21
+      1   12.5%        LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/@mapbox/node-pre-gyp/node_modules/nopt/lib/nopt.js:58:38
+      1  100.0%          /usr/local/bin/node
+      1  100.0%            LazyCompile: ~clean /home/pablo/curso/coder-logs/node_modules/@mapbox/node-pre-gyp/node_modules/nopt/lib/nopt.js:53:16
+      1   12.5%        Function: ~<anonymous> node:internal/crypto/keys:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1   12.5%        Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mquery/lib/mquery.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1   12.5%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            Function: ^<anonymous> node:internal/bootstrap/loaders:290:15
+      3    3.3%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      3  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.2%      LazyCompile: ~realpathSync node:fs:2460:22
+      2  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      2  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      2  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2    2.2%      LazyCompile: ~readSync node:fs:699:18
+      2  100.0%        LazyCompile: ~tryReadSync node:fs:438:21
+      2  100.0%          LazyCompile: ~readFileSync node:fs:459:22
+      2  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      2    2.2%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.2%      LazyCompile: ~module.exports.evaluate /home/pablo/curso/coder-logs/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:277:35
+      2  100.0%        LazyCompile: ~exports.find /home/pablo/curso/coder-logs/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      2  100.0%          Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/bcrypt/bcrypt.js:1:1
+      2  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      2    2.2%      LazyCompile: ~maxWireVersion /home/pablo/curso/coder-logs/node_modules/mongodb/lib/utils.js:373:24
+      1   50.0%        LazyCompile: ~supportsOpMsg /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:408:23
+      1  100.0%          LazyCompile: ~command /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:274:12
+      1  100.0%            LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1   50.0%        Function: ^supportsOpMsg /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:408:23
+      1  100.0%          LazyCompile: ~command /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:274:12
+      1  100.0%            LazyCompile: ~checkServer /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/monitor.js:143:21
+      1    1.1%      LazyCompile: ~wrapIdentifier /home/pablo/curso/coder-logs/node_modules/knex/lib/client.js:169:17
+      1  100.0%        LazyCompile: ~wrapAsIdentifier /home/pablo/curso/coder-logs/node_modules/knex/lib/formatter/formatterUtils.js:16:26
+      1  100.0%          LazyCompile: ~wrapString /home/pablo/curso/coder-logs/node_modules/knex/lib/formatter/wrappingFormatter.js:138:20
+      1  100.0%            LazyCompile: ~wrap /home/pablo/curso/coder-logs/node_modules/knex/lib/formatter/wrappingFormatter.js:79:14
+      1    1.1%      LazyCompile: ~vary /home/pablo/curso/coder-logs/node_modules/vary/index.js:133:15
+      1  100.0%        LazyCompile: ~onResponseHeaders /home/pablo/curso/coder-logs/node_modules/compression/index.js:140:47
+      1  100.0%          LazyCompile: ~writeHead /home/pablo/curso/coder-logs/node_modules/on-headers/index.js:28:29
+      1  100.0%            LazyCompile: ~_implicitHeader node:_http_server:287:68
+      1    1.1%      LazyCompile: ~updateRsWithPrimaryFromMember /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/topology_description.js:326:39
+      1  100.0%        Function: ^update /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/topology_description.js:131:11
+      1  100.0%          Function: ^serverUpdateHandler /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/topology.js:320:24
+      1  100.0%            Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/topology.js:480:53
+      1    1.1%      LazyCompile: ~streamIdentifier /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:415:26
+      1  100.0%        LazyCompile: ~Connection /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:38:16
+      1  100.0%          LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1  100.0%            LazyCompile: ~callback /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:269:31
+      1    1.1%      LazyCompile: ~setCharset /home/pablo/curso/coder-logs/node_modules/express/lib/utils.js:248:41
+      1  100.0%        LazyCompile: ~send /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:111:25
+      1  100.0%          LazyCompile: ~json /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:250:25
+      1  100.0%            LazyCompile: ~send /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:111:25
+      1    1.1%      LazyCompile: ~serializeString /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/serializer.js:19:25
+      1  100.0%        LazyCompile: ~serializeInto /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%          LazyCompile: ~serializeObject /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/serializer.js:260:25
+      1  100.0%            LazyCompile: ~serializeInto /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/serializer.js:553:23
+      1    1.1%      LazyCompile: ~serializeBinary /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/serializer.js:462:25
+      1  100.0%        Function: ^serializeInto /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%          Function: ^serializeObject /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/serializer.js:260:25
+      1  100.0%            Function: ^serializeInto /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/serializer.js:553:23
+      1    1.1%      LazyCompile: ~retry /home/pablo/curso/coder-logs/node_modules/graceful-fs/graceful-fs.js:397:16
+      1  100.0%        Function: ^resetQueue /home/pablo/curso/coder-logs/node_modules/graceful-fs/graceful-fs.js:383:21
+      1  100.0%          Function: ^closeSync /home/pablo/curso/coder-logs/node_modules/graceful-fs/graceful-fs.js:72:24
+      1  100.0%            Function: ^readFileSync node:fs:459:22
+      1    1.1%      LazyCompile: ~resetSocketTimeout node:_http_server:986:28
+      1  100.0%        LazyCompile: ~parserOnIncoming node:_http_server:880:26
+      1  100.0%          LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1    1.1%      LazyCompile: ~resetQueue /home/pablo/curso/coder-logs/node_modules/graceful-fs/graceful-fs.js:383:21
+      1  100.0%        LazyCompile: ~closeSync /home/pablo/curso/coder-logs/node_modules/graceful-fs/graceful-fs.js:72:24
+      1  100.0%          Function: ^readFileSync node:fs:459:22
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    1.1%      LazyCompile: ~read /home/pablo/curso/coder-logs/node_modules/saslprep/lib/memory-code-points.js:15:14
+      1  100.0%        Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/saslprep/lib/memory-code-points.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    1.1%      LazyCompile: ~processPromiseRejections node:internal/process/promises:211:34
+      1  100.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.1%      LazyCompile: ~prefinish node:internal/streams/writable:721:19
+      1  100.0%        Function: ^finishMaybe node:internal/streams/writable:733:21
+      1  100.0%          LazyCompile: ~Writable.end node:internal/streams/writable:596:34
+      1  100.0%            LazyCompile: ~Socket.end node:net:654:32
+      1    1.1%      LazyCompile: ~parserOnIncoming node:_http_server:880:26
+      1  100.0%        Function: ^parserOnHeadersComplete node:_http_common:77:33
+      1    1.1%      LazyCompile: ~parseOptions /home/pablo/curso/coder-logs/node_modules/mongodb/lib/connection_string.js:195:22
+      1  100.0%        LazyCompile: ~MongoClient /home/pablo/curso/coder-logs/node_modules/mongodb/lib/mongo_client.js:43:16
+      1  100.0%          LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/connection.js:799:31
+      1  100.0%            /usr/local/bin/node
+      1    1.1%      LazyCompile: ~parse node:url:167:37
+      1  100.0%        LazyCompile: ~urlParse node:url:151:18
+      1  100.0%          LazyCompile: ~validate_config /home/pablo/curso/coder-logs/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%            LazyCompile: ~exports.find /home/pablo/curso/coder-logs/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    1.1%      LazyCompile: ~onMessage /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1  100.0%        Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:61:44
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1    1.1%      LazyCompile: ~lookup node:dns:141:16
+      1  100.0%        LazyCompile: ~<anonymous> node:net:1132:61
+      1  100.0%          Function: ^defaultTriggerAsyncIdScope node:internal/async_hooks:455:36
+      1  100.0%            LazyCompile: ~lookupAndConnect node:net:1076:26
+      1    1.1%      LazyCompile: ~initialize /home/pablo/curso/coder-logs/node_modules/passport/lib/middleware/initialize.js:51:29
+      1  100.0%        Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:280:64
+      1    1.1%      LazyCompile: ~immediate /home/pablo/curso/coder-logs/node_modules/mongoose/lib/helpers/immediate.js:14:36
+      1  100.0%        LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/connection.js:575:34
+      1  100.0%          LazyCompile: ~promiseOrCallback /home/pablo/curso/coder-logs/node_modules/mongoose/lib/helpers/promiseOrCallback.js:8:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/connection.js:568:18
+      1    1.1%      LazyCompile: ~get node:internal/streams/writable:847:8
+      1  100.0%        LazyCompile: ~socketOnDrain node:_http_server:587:23
+      1  100.0%          LazyCompile: ~updateOutgoingData node:_http_server:582:28
+      1  100.0%            LazyCompile: ~_flushOutput node:_http_outgoing:1030:63
+      1    1.1%      LazyCompile: ~get node:events:272:16
+      1  100.0%        /usr/local/bin/node
+      1  100.0%          Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%            Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1    1.1%      LazyCompile: ~get level /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:103:12
+      1  100.0%        LazyCompile: ~isLevelEnabled /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:159:17
+      1  100.0%          LazyCompile: ~log /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:139:6
+      1  100.0%            LazyCompile: ~Logger.<computed> /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:234:44
+      1    1.1%      LazyCompile: ~get hostname node:internal/url:855:15
+      1  100.0%        Function: ^getPathFromURLPosix node:internal/url:1412:29
+      1  100.0%          LazyCompile: ~fileURLToPath node:internal/url:1430:23
+      1  100.0%            LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:962:31
+      1    1.1%      LazyCompile: ~get expires /home/pablo/curso/coder-logs/node_modules/express-session/session/cookie.js:72:14
+      1  100.0%        LazyCompile: ~get maxAge /home/pablo/curso/coder-logs/node_modules/express-session/session/cookie.js:104:13
+      1  100.0%          LazyCompile: ~set expires /home/pablo/curso/coder-logs/node_modules/express-session/session/cookie.js:60:14
+      1  100.0%            /usr/local/bin/node
+      1    1.1%      LazyCompile: ~forEachCode /home/pablo/curso/coder-logs/node_modules/statuses/index.js:66:51
+      1  100.0%        /usr/local/bin/node
+      1  100.0%          LazyCompile: ~createMessageToStatusCodeMap /home/pablo/curso/coder-logs/node_modules/statuses/index.js:63:39
+      1  100.0%            Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/statuses/index.js:1:1
+      1    1.1%      LazyCompile: ~forEachCode /home/pablo/curso/coder-logs/node_modules/http-errors/index.js:259:38
+      1  100.0%        /usr/local/bin/node
+      1  100.0%          LazyCompile: ~populateConstructorExports /home/pablo/curso/coder-logs/node_modules/http-errors/index.js:258:37
+      1  100.0%            Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/http-errors/index.js:1:1
+      1    1.1%      LazyCompile: ~extend /home/pablo/curso/coder-logs/node_modules/handlebars/dist/cjs/handlebars/utils.js:28:16
+      1  100.0%        Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    1.1%      LazyCompile: ~emit node:events:460:44
+      1  100.0%        LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/server.js:58:31
+      1  100.0%          LazyCompile: ~emit node:events:460:44
+      1  100.0%            LazyCompile: ~checkServer /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/monitor.js:143:21
+      1    1.1%      LazyCompile: ~destroyHooksExist node:internal/async_hooks:486:27
+      1  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.1%      LazyCompile: ~debug /home/pablo/curso/coder-logs/node_modules/body-parser/node_modules/debug/src/debug.js:65:17
+      1  100.0%        Function: ^jsonParser /home/pablo/curso/coder-logs/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1    1.1%      LazyCompile: ~createDebug /home/pablo/curso/coder-logs/node_modules/debug/src/common.js:60:22
+      1  100.0%        Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/engine.io/build/userver.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    1.1%      LazyCompile: ~create /home/pablo/curso/coder-logs/node_modules/knex/lib/client.js:247:15
+      1  100.0%        /usr/local/bin/node
+      1    1.1%      LazyCompile: ~copy node:buffer:782:16
+      1  100.0%        Function: ^deserializeObject /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          Function: ^deserializeObject /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            LazyCompile: ~deserialize /home/pablo/curso/coder-logs/node_modules/bson/lib/parser/deserializer.js:36:21
+      1    1.1%      LazyCompile: ~connect node:_tls_wrap:1602:35
+      1  100.0%        LazyCompile: ~makeConnection /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:256:24
+      1  100.0%          LazyCompile: ~connect /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1  100.0%            LazyCompile: ~measureRoundTripTime /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/monitor.js:288:30
+      1    1.1%      LazyCompile: ~configForCategory /home/pablo/curso/coder-logs/node_modules/log4js/lib/categories.js:173:27
+      1  100.0%        LazyCompile: ~getEnableCallStackForCategory /home/pablo/curso/coder-logs/node_modules/log4js/lib/categories.js:205:39
+      1  100.0%          LazyCompile: ~get useCallStack /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:117:19
+      1  100.0%            LazyCompile: ~_log /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:163:7
+      1    1.1%      LazyCompile: ~compile /home/pablo/curso/coder-logs/node_modules/mongoose/lib/model.js:5014:33
+      1  100.0%        LazyCompile: ~Mongoose._model /home/pablo/curso/coder-logs/node_modules/mongoose/lib/index.js:617:37
+      1  100.0%          LazyCompile: ~Mongoose.model /home/pablo/curso/coder-logs/node_modules/mongoose/lib/index.js:546:36
+      1  100.0%            Function: ~<anonymous> /home/pablo/curso/coder-logs/dist/schemas/user.js:1:1
+      1    1.1%      LazyCompile: ~checkServerIdentity node:tls:282:59
+      1  100.0%        LazyCompile: ~onConnectSecure node:_tls_wrap:1521:25
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:923:43
+      1    1.1%      LazyCompile: ~check /home/pablo/curso/coder-logs/node_modules/tarn/dist/Pool.js:155:10
+      1  100.0%        LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/tarn/dist/Pool.js:457:41
+      1  100.0%          Function: ^listOnTimeout node:internal/timers:507:25
+      1  100.0%            Function: ^processTimers node:internal/timers:487:25
+      1    1.1%      LazyCompile: ~baseRest /home/pablo/curso/coder-logs/node_modules/lodash/_baseRest.js:13:18
+      1  100.0%        Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/lodash/defaults.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    1.1%      LazyCompile: ~baseGetTag /home/pablo/curso/coder-logs/node_modules/lodash/_baseGetTag.js:19:20
+      1  100.0%        LazyCompile: ~isFunction /home/pablo/curso/coder-logs/node_modules/lodash/isFunction.js:27:20
+      1  100.0%          LazyCompile: ~baseIsNative /home/pablo/curso/coder-logs/node_modules/lodash/_baseIsNative.js:39:22
+      1  100.0%            LazyCompile: ~getNative /home/pablo/curso/coder-logs/node_modules/lodash/_getNative.js:12:19
+      1    1.1%      LazyCompile: ~_log /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:163:7
+      1  100.0%        LazyCompile: ~log /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:139:6
+      1  100.0%          LazyCompile: ~Logger.<computed> /home/pablo/curso/coder-logs/node_modules/log4js/lib/logger.js:234:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/dist/router.js:43:13
+      1    1.1%      LazyCompile: ~_log /home/pablo/curso/coder-logs/node_modules/knex/lib/logger.js:25:7
+      1  100.0%        LazyCompile: ~warn /home/pablo/curso/coder-logs/node_modules/knex/lib/logger.js:49:7
+      1  100.0%          LazyCompile: ~Client_SQLite3 /home/pablo/curso/coder-logs/node_modules/knex/lib/dialects/sqlite3/index.js:21:14
+      1  100.0%            LazyCompile: ~knex /home/pablo/curso/coder-logs/node_modules/knex/lib/knex-builder/Knex.js:13:14
+      1    1.1%      LazyCompile: ~TLSSocket node:_tls_wrap:466:19
+      1  100.0%        LazyCompile: ~connect node:_tls_wrap:1602:35
+      1  100.0%          LazyCompile: ~makeConnection /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:256:24
+      1  100.0%            LazyCompile: ~connect /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1    1.1%      LazyCompile: ~Socket.setKeepAlive node:net:548:41
+      1  100.0%        LazyCompile: ~makeConnection /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:256:24
+      1  100.0%          LazyCompile: ~connect /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1  100.0%            LazyCompile: ~checkServer /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/monitor.js:143:21
+      1    1.1%      LazyCompile: ~Socket node:net:294:16
+      1  100.0%        LazyCompile: ~onconnection node:net:1658:22
+      1    1.1%      LazyCompile: ~Server.listen node:net:1513:35
+      1  100.0%        LazyCompile: ~listen /home/pablo/curso/coder-logs/node_modules/express/lib/application.js:633:29
+      1  100.0%          LazyCompile: ~loadRoutes /home/pablo/curso/coder-logs/dist/router.js:39:20
+      1  100.0%            Function: ~<anonymous> /home/pablo/curso/coder-logs/dist/server.js:1:1
+      1    1.1%      LazyCompile: ~RollingFileWriteStream /home/pablo/curso/coder-logs/node_modules/streamroller/lib/RollingFileWriteStream.js:40:14
+      1  100.0%        LazyCompile: ~RollingFileStream /home/pablo/curso/coder-logs/node_modules/streamroller/lib/RollingFileStream.js:5:14
+      1  100.0%          LazyCompile: ~openTheStream /home/pablo/curso/coder-logs/node_modules/log4js/lib/appenders/file.js:63:25
+      1  100.0%            LazyCompile: ~fileAppender /home/pablo/curso/coder-logs/node_modules/log4js/lib/appenders/file.js:29:22
+      1    1.1%      LazyCompile: ~Pager.set /home/pablo/curso/coder-logs/node_modules/memory-pager/index.js:81:32
+      1  100.0%        LazyCompile: ~Bitfield /home/pablo/curso/coder-logs/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%          LazyCompile: ~Bitfield /home/pablo/curso/coder-logs/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%            LazyCompile: ~read /home/pablo/curso/coder-logs/node_modules/saslprep/lib/memory-code-points.js:15:14
+      1    1.1%      LazyCompile: ~NodeError node:internal/errors:355:28
+      1  100.0%        LazyCompile: ~getReport node:internal/process/report:32:12
+      1  100.0%          LazyCompile: ~getReport /home/pablo/curso/coder-logs/node_modules/detect-libc/lib/process.js:6:19
+      1  100.0%            LazyCompile: ~familyFromReport /home/pablo/curso/coder-logs/node_modules/detect-libc/lib/detect-libc.js:48:26
+      1    1.1%      LazyCompile: ~MongooseServerSelectionError /home/pablo/curso/coder-logs/node_modules/mongoose/lib/error/serverSelection.js:26:1
+      1  100.0%        LazyCompile: ~Model.$wrapCallback /home/pablo/curso/coder-logs/node_modules/mongoose/lib/model.js:5232:31
+      1  100.0%          LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/model.js:1470:52
+      1  100.0%            LazyCompile: ~promiseOrCallback /home/pablo/curso/coder-logs/node_modules/mongoose/lib/helpers/promiseOrCallback.js:8:44
+      1    1.1%      LazyCompile: ~Long.add /home/pablo/curso/coder-logs/node_modules/bson/lib/long.js:252:35
+      1  100.0%        LazyCompile: ~Long.subtract /home/pablo/curso/coder-logs/node_modules/bson/lib/long.js:720:40
+      1  100.0%          LazyCompile: ~Long.sub /home/pablo/curso/coder-logs/node_modules/bson/lib/long.js:726:35
+      1  100.0%            LazyCompile: ~Long.compare /home/pablo/curso/coder-logs/node_modules/bson/lib/long.js:291:39
+      1    1.1%      LazyCompile: ~ConnectionString /home/pablo/curso/coder-logs/node_modules/mongodb-connection-string-url/lib/index.js:82:16
+      1  100.0%        LazyCompile: ~parseOptions /home/pablo/curso/coder-logs/node_modules/mongodb/lib/connection_string.js:195:22
+      1  100.0%          LazyCompile: ~MongoClient /home/pablo/curso/coder-logs/node_modules/mongodb/lib/mongo_client.js:43:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/connection.js:799:31
+      1    1.1%      LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/index.js:416:49
+      1  100.0%        LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:22
+      1  100.0%          /usr/local/bin/node
+      1  100.0%            LazyCompile: ~promiseOrCallback /home/pablo/curso/coder-logs/node_modules/mongoose/lib/helpers/promiseOrCallback.js:8:44
+      1    1.1%      LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/log4js/lib/configuration.js:51:21
+      1  100.0%        /usr/local/bin/node
+      1  100.0%          LazyCompile: ~configure /home/pablo/curso/coder-logs/node_modules/log4js/lib/configuration.js:42:19
+      1  100.0%            LazyCompile: ~configure /home/pablo/curso/coder-logs/node_modules/log4js/lib/log4js.js:59:19
+      1    1.1%      LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/lodash/transform.js:59:56
+      1  100.0%        LazyCompile: ~arrayEach /home/pablo/curso/coder-logs/node_modules/lodash/_arrayEach.js:10:19
+      1  100.0%          LazyCompile: ~transform /home/pablo/curso/coder-logs/node_modules/lodash/transform.js:42:19
+      1  100.0%            Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/knex/lib/formatter/wrappingFormatter.js:1:1
+      1    1.1%      LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/dist/router.js:113:59
+      1  100.0%        LazyCompile: ~handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~next /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:116:16
+      1  100.0%            LazyCompile: ~compression /home/pablo/curso/coder-logs/node_modules/compression/index.js:59:31
+      1    1.1%      LazyCompile: *emit node:events:460:44
+      1  100.0%        LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/sdam/monitor.js:178:73
+      1  100.0%          LazyCompile: ~onMessage /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1  100.0%            Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:61:44
+      1    1.1%      Function: ~<anonymous> node:internal/crypto/webcrypto:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1    1.1%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/sqlite3/lib/sqlite3.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1    1.1%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/send/node_modules/debug/src/node.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    1.1%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    1.1%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    1.1%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    1.1%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/http-errors/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    1.1%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/express-session/node_modules/debug/src/node.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    1.1%      Function: ^write_ node:_http_outgoing:790:16
+      1  100.0%        Function: ^end node:_http_outgoing:912:45
+      1  100.0%          Function: ^end /home/pablo/curso/coder-logs/node_modules/express-session/index.js:250:27
+      1  100.0%            Function: ^end /home/pablo/curso/coder-logs/node_modules/compression/index.js:92:28
+      1    1.1%      Function: ^redefineProperties /home/pablo/curso/coder-logs/node_modules/knex/lib/knex-builder/make-knex.js:235:28
+      1  100.0%        LazyCompile: ~makeKnex /home/pablo/curso/coder-logs/node_modules/knex/lib/knex-builder/make-knex.js:97:18
+      1  100.0%          LazyCompile: ~knex /home/pablo/curso/coder-logs/node_modules/knex/lib/knex-builder/Knex.js:13:14
+      1  100.0%            LazyCompile: ~DbManager /home/pablo/curso/coder-logs/dist/scripts/dbScripts.js:11:16
+      1    1.1%      Function: ^processIncomingData /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1  100.0%        Function: ^_write /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1  100.0%          Function: ^writeOrBuffer node:internal/streams/writable:367:23
+      1  100.0%            Function: ^_write node:internal/streams/writable:285:16
+      1    1.1%      Function: ^lookup /home/pablo/curso/coder-logs/node_modules/mime/mime.js:102:19
+      1  100.0%        Function: ^header /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:777:29
+      1  100.0%          Function: ^json /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:250:25
+      1  100.0%            Function: ^send /home/pablo/curso/coder-logs/node_modules/express/lib/response.js:111:25
+
+     98    2.0%  /usr/lib/libc.so.6
+     42   42.9%    /usr/local/bin/node
+      7   16.7%      /usr/local/bin/node
+      1   14.3%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:499:36
+      1  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      1  100.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      1   14.3%        LazyCompile: ~check /home/pablo/curso/coder-logs/node_modules/tarn/dist/Pool.js:155:10
+      1  100.0%          LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/tarn/dist/Pool.js:457:41
+      1  100.0%            LazyCompile: ~listOnTimeout node:internal/timers:507:25
+      1   14.3%        LazyCompile: *realpathSync node:fs:2460:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      1   14.3%        Function: ^toString node:buffer:790:46
+      1  100.0%          Function: ^toString /home/pablo/curso/coder-logs/node_modules/uid-safe/index.js:102:19
+      1  100.0%            Function: ^uidSync /home/pablo/curso/coder-logs/node_modules/uid-safe/index.js:75:18
+      1   14.3%        Function: ^resolve node:path:1091:10
+      1  100.0%          Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      1  100.0%            Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      1   14.3%        Function: ^dispatch /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:98:45
+      1  100.0%          Function: ^handle /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      1   14.3%        Function: ^<anonymous> node:internal/fs/utils:360:35
+      1  100.0%          Function: ^<anonymous> node:internal/fs/utils:671:38
+      1  100.0%            Function: ^<anonymous> node:internal/fs/utils:683:42
+      2    4.8%      Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      2  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1   50.0%            Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/types/DocumentArray/methods/index.js:1:1
+      1   50.0%            Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/lodash/_getTag.js:1:1
+      1    2.4%      LazyCompile: ~wrapThunk /home/pablo/curso/coder-logs/node_modules/mongoose/lib/helpers/query/wrapThunk.js:16:36
+      1  100.0%        Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/query.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    2.4%      LazyCompile: ~realpathSync node:fs:2460:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1    2.4%      LazyCompile: ~readPackage node:internal/modules/cjs/loader:301:21
+      1  100.0%        LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%          LazyCompile: ~shouldUseESMLoader node:internal/modules/run_main:30:28
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1    2.4%      LazyCompile: ~processWaitQueue /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection_pool.js:435:21
+      1  100.0%        LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection_pool.js:183:26
+      1  100.0%          Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.4%      LazyCompile: ~onMessage /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1  100.0%        Function: ^<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connection.js:61:44
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            Function: ^processIncomingData /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1    2.4%      LazyCompile: ~normalizeString node:path:66:25
+      1  100.0%        LazyCompile: ~resolve node:path:1091:10
+      1  100.0%          LazyCompile: ~Module._initPaths node:internal/modules/cjs/loader:1254:29
+      1  100.0%            LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      1    2.4%      LazyCompile: ~loadRoutes /home/pablo/curso/coder-logs/dist/router.js:39:20
+      1  100.0%        Function: ~<anonymous> /home/pablo/curso/coder-logs/dist/server.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    2.4%      LazyCompile: ~engine /home/pablo/curso/coder-logs/node_modules/express-handlebars/dist/index.js:16:16
+      1  100.0%        LazyCompile: ~loadRoutes /home/pablo/curso/coder-logs/dist/router.js:39:20
+      1  100.0%          Function: ~<anonymous> /home/pablo/curso/coder-logs/dist/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1    2.4%      LazyCompile: ~emit node:events:460:44
+      1  100.0%        LazyCompile: ~_addListener node:events:541:22
+      1  100.0%          LazyCompile: ~addListener node:events:604:58
+      1  100.0%            LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:168:29
+      1    2.4%      LazyCompile: ~digest node:internal/crypto/hash:119:40
+      1  100.0%        LazyCompile: ~hash /home/pablo/curso/coder-logs/node_modules/express-session/index.js:596:14
+      1  100.0%          LazyCompile: ~isModified /home/pablo/curso/coder-logs/node_modules/express-session/index.js:425:24
+      1  100.0%            LazyCompile: ~shouldSetCookie /home/pablo/curso/coder-logs/node_modules/express-session/index.js:464:29
+      1    2.4%      LazyCompile: ~depd /home/pablo/curso/coder-logs/node_modules/depd/index.js:103:15
+      1  100.0%        Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/body-parser/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    2.4%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%          Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/finalhandler/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1    2.4%      LazyCompile: ~Schema.virtual /home/pablo/curso/coder-logs/node_modules/mongoose/lib/schema.js:2068:36
+      1  100.0%        LazyCompile: ~addIdGetter /home/pablo/curso/coder-logs/node_modules/mongoose/lib/helpers/schema/idGetter.js:7:38
+      1  100.0%          LazyCompile: ~_preCompile /home/pablo/curso/coder-logs/node_modules/mongoose/lib/schema.js:2517:52
+      1  100.0%            LazyCompile: ~compile /home/pablo/curso/coder-logs/node_modules/mongoose/lib/model.js:5014:33
+      1    2.4%      LazyCompile: ~Pager /home/pablo/curso/coder-logs/node_modules/memory-pager/index.js:3:16
+      1  100.0%        LazyCompile: ~Pager /home/pablo/curso/coder-logs/node_modules/memory-pager/index.js:3:16
+      1  100.0%          Function: ^Bitfield /home/pablo/curso/coder-logs/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%            Function: ^Bitfield /home/pablo/curso/coder-logs/node_modules/sparse-bitfield/index.js:5:19
+      1    2.4%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:1020:36
+      1    2.4%      LazyCompile: ~Layer /home/pablo/curso/coder-logs/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%        LazyCompile: ~use /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:439:25
+      1  100.0%          LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/express/lib/application.js:224:24
+      1  100.0%            /usr/local/bin/node
+      1    2.4%      LazyCompile: ~Authenticator.init /home/pablo/curso/coder-logs/node_modules/passport/lib/authenticator.js:29:40
+      1  100.0%        LazyCompile: ~Authenticator /home/pablo/curso/coder-logs/node_modules/passport/lib/authenticator.js:13:23
+      1  100.0%          Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/passport/lib/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    2.4%      LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/operations/operation.js:28:51
+      1  100.0%        LazyCompile: ~<anonymous> node:internal/util:347:24
+      1  100.0%          /usr/local/bin/node
+      1  100.0%            LazyCompile: ~fn node:internal/util:346:14
+      1    2.4%      LazyCompile: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1  100.0%        LazyCompile: ~callback /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:269:31
+      1  100.0%          LazyCompile: ~connectHandler /home/pablo/curso/coder-logs/node_modules/mongodb/lib/cmap/connect.js:313:28
+      1  100.0%            Function: ^onceWrapper node:events:622:21
+      1    2.4%      LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      1  100.0%        Function: ^error /home/pablo/curso/coder-logs/node_modules/serve-static/index.js:115:39
+      1  100.0%          LazyCompile: *emit node:events:460:44
+      1  100.0%            Function: ^error /home/pablo/curso/coder-logs/node_modules/send/index.js:267:45
+      1    2.4%      LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:640:37
+      1  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      1    2.4%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      1    2.4%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/yallist/yallist.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1    2.4%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/mongoose/lib/document.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    2.4%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/handlebars/dist/cjs/handlebars.runtime.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    2.4%      Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/bson/lib/long.js:45:36
+      1  100.0%        Function: ~<anonymous> /home/pablo/curso/coder-logs/node_modules/bson/lib/long.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    2.4%      Function: ~<anonymous> /home/pablo/curso/coder-logs/dist/server.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:992:33
+      1    2.4%      Function: ^setHeader node:_http_outgoing:601:57
+      1  100.0%        Function: ^expressInit /home/pablo/curso/coder-logs/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%          LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      1    2.4%      Function: ^debug /home/pablo/curso/coder-logs/node_modules/express-session/node_modules/debug/src/debug.js:65:17
+      1  100.0%        Function: ^session /home/pablo/curso/coder-logs/node_modules/express-session/index.js:179:26
+      1  100.0%          LazyCompile: *trim_prefix /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      1    2.4%      Function: ^_handles_method /home/pablo/curso/coder-logs/node_modules/express/lib/router/route.js:58:59
+      1  100.0%        LazyCompile: *next /home/pablo/curso/coder-logs/node_modules/express/lib/router/index.js:177:16
+      1  100.0%          Function: ^strategy.pass /home/pablo/curso/coder-logs/node_modules/passport/lib/middleware/authenticate.js:345:31
+      1  100.0%            Function: ^SessionStrategy.authenticate /home/pablo/curso/coder-logs/node_modules/passport/lib/strategies/session.js:45:50
+      1    2.4%      Function: ^Readable.read node:internal/streams/readable:394:35
+      1  100.0%        Function: ^flow node:internal/streams/readable:1008:14
+      1  100.0%          Function: ^resume_ node:internal/streams/readable:984:17
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.4%      Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    2.4%      Function: ^EventEmitter.init node:events:337:29
+      1  100.0%        Function: ^EventEmitter node:events:212:22
+      1  100.0%          LazyCompile: ~StrictEventEmitter /home/pablo/curso/coder-logs/node_modules/socket.io/dist/typed-events.js:18:1
+      1  100.0%            LazyCompile: ~Namespace /home/pablo/curso/coder-logs/node_modules/socket.io/dist/namespace.js:73:16
+      1    1.0%    LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%      Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+
