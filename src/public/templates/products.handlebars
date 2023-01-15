@@ -1,0 +1,37 @@
+<div class="w-100 d-flex flex-column align-items-center">
+	<div class="d-flex flex-row justify-content-between w-100 mb-4">
+		<h1>Welcome {{loggedUser}}!</h1>
+		<button class="btn btn-danger" onclick="logOff()">Log off</button>
+	</div>
+	<nav>
+		<a class="btn btn-primary mx-1" href="stock">STOCK</a>
+		<a class="btn btn-primary mx-1" href="form">FORM</a>
+		<a class="btn btn-primary mx-1" href="chat">CHAT</a>
+		<a class="btn btn-primary mx-1" href="info">INFO</a>
+	</nav>
+</div>
+<h2 class="mt-4">Products</h2>
+{{#if products}}
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+				{{#each products}}
+					<tr>
+						<td>{{this.name}}</td>
+						<td>{{this.price}}</td>
+						<td>
+							<img src={{this.imgUrl}} class="table-img"></img>
+						</td>
+					</tr>
+				{{/each}}
+		</tbody>
+
+	</table>
+	{{else}}
+	<p>No products available</p>
+{{/if}}

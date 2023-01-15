@@ -1,0 +1,42 @@
+<div class="w-100 d-flex flex-column align-items-center">
+	<div class="d-flex flex-row justify-content-between w-100 mb-4">
+		<h1>Welcome {{loggedUser}}!</h1>
+		<button class="btn btn-danger" onclick="logOff()">Log off</button>
+	</div>
+	<nav>
+		<a class="btn btn-primary mx-1" href="stock">STOCK</a>
+		<a class="btn btn-primary mx-1" href="form">FORM</a>
+		<a class="btn btn-primary mx-1" href="chat">CHAT</a>
+		<a class="btn btn-primary mx-1" href="info">INFO</a>
+	</nav>
+</div>
+<h2 class="mt-4">Messages</h2>
+<div class="w-100">
+	<div id="message-box" class="my-4 pb-3 px-3 message-box d-flex flex-column bg-secondary rounded">
+		{{#each messages}}
+			{{#compareStrings this.email ../user}}
+				<div class="message mt-3 d-flex align-self-start flex-column border-0 bg-primary border text-white rounded px-2 py-2">
+					<span class="fs-6 ">{{../this.date}}</span>
+					<span class="fs-6 fw-bold ">{{../this.email}}</span>
+					<span class="fs-6 ">{{../this.message}}</span>
+				</div>
+			{{else}}
+				<div class="message mt-3 d-flex align-self-end flex-column border-0 bg-dark text-white rounded px-2 py-2">
+					<span class="fs-6 ">{{../this.date}}</span>
+					<span class="fs-6 fw-bold ">{{../this.email}}</span>
+					<span class="fs-6 ">{{../this.message}}</span>
+				</div>
+			{{/compareStrings}}
+
+		{{/each}}
+	</div>
+	<div class="form-floating">
+		<input id="email" class="form-control" placeholder="email" type="text">
+		<label for="email">Email</label>
+	</div>
+	<div class="form-floating mt-2">
+		<textarea class="form-control" placeholder="message" id="message"></textarea>
+		<label for="message">Message</label>
+	</div>
+	<button onclick="sendMessage()" class="btn btn-primary mt-2">Send</button>
+</div>

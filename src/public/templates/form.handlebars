@@ -1,0 +1,22 @@
+<div class="w-100 d-flex flex-column align-items-center">
+	<div class="d-flex flex-row justify-content-between w-100 mb-4">
+		<h1>Welcome {{loggedUser}}!</h1>
+		<button class="btn btn-danger" onclick="logOff()">Log off</button>
+	</div>
+	<nav>
+		<a class="btn btn-primary mx-1" href="stock">STOCK</a>
+		<a class="btn btn-primary mx-1" href="form">FORM</a>
+		<a class="btn btn-primary mx-1" href="chat">CHAT</a>
+		<a class="btn btn-primary mx-1" href="info">INFO</a>
+	</nav>
+</div>
+<h2 class="mt-4">Form</h2>
+<form id="product-form">
+	<label for="name" class="form-label mt-2">Name:</label>
+	<input type="text" name="name" id="name" class="form-control">
+	<label for="price" class="form-label mt-2">Price:</label>
+	<input type="text"  name="price" class="form-control" id="price">
+	<label for="imgUrl" class="form-label mt-2">Img Url:</label>
+	<input type="text" name="imgUrl" class="form-control" id="imgUrl">
+	<button onclick="productFormSubmit()" type="button" class="btn btn-primary mt-3">Add Product</button>
+</form>

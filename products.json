@@ -1,0 +1,23 @@
+{
+	"lastId": 3,
+	"products": [
+		{
+			"id": 1,
+			"name": "Lapiz",
+			"price": 20,
+			"imgUrl": "https://cdn0.iconfinder.com/data/icons/shift-free/32/Pencil-256.png"
+		},
+		{
+			"id": 2,
+			"name": "Goma",
+			"price": 2,
+			"imgUrl": "https://cdn1.iconfinder.com/data/icons/education-filled-outline-8/64/Education-Filled_26-256.png"
+		},
+		{
+			"id": 3,
+			"name": "regla",
+			"price": 40,
+			"imgUrl": "https://cdn1.iconfinder.com/data/icons/design-5/32/ruler-256.png"
+		}
+	]
+}

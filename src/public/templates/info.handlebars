@@ -1,0 +1,37 @@
+<div class="w-100 d-flex flex-column align-items-center">
+	<div class="d-flex flex-row justify-content-between w-100 mb-4">
+		<h1>Welcome {{loggedUser}}!</h1>
+		<button class="btn btn-danger" onclick="logOff()">Log off</button>
+	</div>
+	<nav>
+		<a class="btn btn-primary mx-1" href="stock">STOCK</a>
+		<a class="btn btn-primary mx-1" href="form">FORM</a>
+		<a class="btn btn-primary mx-1" href="chat">CHAT</a>
+		<a class="btn btn-primary mx-1" href="info">INFO</a>
+	</nav>
+</div>
+<h2 class="mt-4">Server info</h2>
+<div class="d-flex flex-row bg-dark text-white py-5">
+	<div class="d-flex flex-column px-5">
+		<p class="fw-bold">Process ID</p>
+		<p>{{pid}}</p>
+		<p class="fw-bold">Arguments</p>
+		<p>{{args}}</p>
+		<p class="fw-bold">Exec Path</p>
+		<p>{{execPath}}</p>
+		<p class="fw-bold">Project Path</p>
+		<p>{{projectPath}}</p>
+	</div>
+	<div class="d-flex flex-column px-5">
+		<p class="fw-bold">Operative system</p>
+		<p>{{os}}</p>
+		<p class="fw-bold">Node version</p>
+		<p>{{vnode}}</p>
+		<p class="fw-bold">Memory usage</p>
+		<p>{{rrs}}</p>
+		<p class="fw-bold">Number of processors</p>
+		<p>{{cores}}</p>
+	</div>
+
+
+</div>
