@@ -37,12 +37,9 @@ if(args.m.toUpperCase() == "CLUSTER" && cluster.isPrimary) {
 	loadRoutes({
 		app: app,
 		args: args,
-		coreNumb: NUMBEROFCORES
+		NUMBEROFCORES: NUMBEROFCORES
 	})
 }
-
-
-
 
 
 

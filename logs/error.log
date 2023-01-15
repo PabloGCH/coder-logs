@@ -1,0 +1,19 @@
+[2023-01-15T17:02:56.251] [ERROR] errors - { message: 'User not logged in', url: '/newProduct', method: 'POST' }
+[2023-01-15T17:03:12.254] [ERROR] errors - {
+  message: 'Failed to add product',
+  error: "Didn't provide proper name and price",
+  url: '/newProduct',
+  method: 'POST'
+}
+[2023-01-15T17:06:56.850] [ERROR] errors - {
+  message: 'Failed to add product',
+  error: "Didn't provide proper name and price",
+  url: '/newProduct',
+  method: 'POST'
+}
+[2023-01-15T17:07:07.552] [ERROR] errors - {
+  message: 'Failed to add message',
+  error: 'The message was empty',
+  url: '/newMessage',
+  method: 'POST'
+}

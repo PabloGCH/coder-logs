@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import { Socket, Server as SocketServer} from "socket.io";
 import { ProductDbManager } from "./managers/productsDbManager";
 import { MessageDbManager } from "./managers/messageDbManager";
@@ -14,6 +14,25 @@ import passportLocal from "passport-local";
 import path from "path";
 import bcrypt from "bcrypt";
 import compression from "compression";
+import log4js from "log4js";
+
+
+const logger = log4js.getLogger("default");
+const warningLogger = log4js.getLogger("warnings");
+const errorLogger = log4js.getLogger("errors");
+
+log4js.configure({
+	appenders: {
+		console: {type: "console"},
+		warnLogFile: {type: "file", filename: "logs/warn.log"},
+		errorLogFile: {type: "file", filename: "logs/error.log"}
+	},
+	categories: {
+		default: { appenders: ["console"], level: "trace"},
+		errors: { appenders: ["console", "errorLogFile"], level: "error"},
+		warnings: { appenders: ["console" , "warnLogFile"], level: "warn"}
+	}
+})
 
 
 
@@ -21,6 +40,14 @@ export const loadRoutes = ({app, args, NUMBEROFCORES} :any) => {
 	app.use(express.json());
 	app.use(express.urlencoded({extended: true}));
 	app.use(express.static(path.join(__dirname, 'public')));
+	app.use((req :any, res :any, next :any) => {
+		logger.info({
+			message: "Request",
+			url: req.url,
+			method: req.method
+		})
+		next();
+	})
 
 	const server = app.listen(args.p, ()=>{console.log(`server listening on port ${args.p}`)});
 	const io = new SocketServer(server)
@@ -67,7 +94,7 @@ export const loadRoutes = ({app, args, NUMBEROFCORES} :any) => {
 			UserModel.findOne({username: username}, (err:any, userFound:any) => {
 				if(err) return done(err);
 				if(userFound) {
-					Object.assign(req, {success: false,message: "user already exists"})
+					Object.assign(req, {success: false, message: "user already exists"})
 					return done(null, userFound);
 				}
 				const newUser = {
@@ -199,34 +226,83 @@ export const loadRoutes = ({app, args, NUMBEROFCORES} :any) => {
 		}
 	})
 
-	app.post("/newMessage", (req :any, res :any) => {
-		if(req.session.user == undefined){
-			res.send({success: false, message: "not_logged"})
-		} else {
-			messageManager.save(req.body).then(() => {
-				messageManager.getAll().then(messages => {
-					io.sockets.emit("messages", {messages: messages})
-					res.send({success: true})
+	app.post("/newMessage", (req :Request|any, res :Response) => {
+		try {
+			if(req.session.user == undefined){
+				errorLogger.error({
+					message: "User not logged in",
+					url: req.url,
+					method: req.method
 				})
-			})
+				res.send({success: false, message: "not_logged"})
+			} else {
+				messageManager.save(req.body).then(() => {
+					messageManager.getAll().then(messages => {
+						io.sockets.emit("messages", {messages: messages})
+						res.send({success: true})
+					})
+				}).catch((err) => {
+					errorLogger.error({
+						message: "Failed to add message",
+						error: err,
+						url: req.url,
+						method: req.method
+					});
+					res.send({success: false, message: err || "Failed to add message"})
+				})
+			}
 		}
+		catch(err) {
+			errorLogger.error({
+				message: "Failed to add message",
+				error: err || null,
+				url: req.url,
+				method: req.method
+			})
+			res.send({success: false, message: err || "Failed to add message"})
+		}
+
 	});
 
 	app.post("/newProduct", (req :any, res :any) => {
-		if(req.session.user == undefined){
-			res.send({success: false, message: "not_logged"})
-		} else {
-			console.log("logged")
-			let product = req.body;
-			Object.assign(product, {price: parseInt(product.price)});
-			container.save(product).then(() => {
-				container.getAll().then(products => {
-					io.sockets.emit("products", {products: products})
-					res.send({success: true})
+		try {
+			if(req.session.user == undefined){
+				let error = {success: false, message: "not_logged"};
+				errorLogger.error({
+					message: "User not logged in",
+					url: req.url,
+					method: req.method
 				})
-			})
+				res.send(error)
+			} else {
+				let product = req.body;
+				Object.assign(product, {price: parseInt(product.price)});
+				container.save(product).then(() => {
+					container.getAll().then(products => {
+						io.sockets.emit("products", {products: products})
+						res.send({success: true})
+					})
+				})
+				.catch(err => {
+					errorLogger.error({
+						message: "Failed to add product",
+						error: err,
+						url: req.url,
+						method: req.method
+					});
+					res.send({success: false, message: err || "Failed to add product"})
+				})
+			}
 		}
-
+		catch(err) {
+			errorLogger.error({
+				message: "Failed to add product",
+				error: err,
+				url: req.url,
+				method: req.method
+			});
+			res.send({success: false, message: err || "Failed to add product"})
+		}
 	});
 	app.get("/userData", (req :any, res :any) => {
 		res.send(req.session.user.name)
@@ -251,6 +327,15 @@ export const loadRoutes = ({app, args, NUMBEROFCORES} :any) => {
 		messageManager.getAll().then(messages => {
 			socket.emit("messages", {messages: messages})
 		})
+	})
+
+	app.get("*", (req :Request, res :Response) => {
+		warningLogger.warn({
+			message: "Route not found",
+			url: req.url,
+			method: req.method
+		})
+		res.sendStatus(404);
 	})
 
 }

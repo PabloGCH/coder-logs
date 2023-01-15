@@ -1,0 +1,37 @@
+
+[2023-01-15T15:53:05.485] [WARN] warnings - { message: 'Route not found', url: '/vsdvsadvsad', method: 'GET' }
+[2023-01-15T15:53:16.216] [WARN] warnings - { message: 'Route not found', url: '/vsdvsadvsad', method: 'GET' }
+[2023-01-15T15:53:17.891] [WARN] warnings - { message: 'Route not found', url: '/vsdvsadvsad', method: 'GET' }
+[2023-01-15T15:53:20.541] [WARN] warnings - { message: 'Route not found', url: '/vsdvsadvsad', method: 'GET' }
+[2023-01-15T15:53:22.430] [WARN] warnings - { message: 'Route not found', url: '/vsdvsadvsad', method: 'GET' }
+[2023-01-15T16:05:37.196] [WARN] warnings - { message: 'Route not found', url: '/vsdvsadvsad', method: 'GET' }
+[2023-01-15T16:35:46.830] [WARN] warnings - {
+  message: 'Route not found',
+  url: '/class=%22table-img%22',
+  method: 'GET'
+}
+[2023-01-15T16:36:35.743] [WARN] warnings - {
+  message: 'Route not found',
+  url: '/class=%22table-img%22',
+  method: 'GET'
+}
+[2023-01-15T16:40:57.797] [WARN] warnings - {
+  message: 'Route not found',
+  url: '/class=%22table-img%22',
+  method: 'GET'
+}
+[2023-01-15T16:43:46.151] [WARN] warnings - {
+  message: 'Route not found',
+  url: '/class=%22table-img%22',
+  method: 'GET'
+}
+[2023-01-15T16:47:45.595] [WARN] warnings - {
+  message: 'Route not found',
+  url: '/class=%22table-img%22',
+  method: 'GET'
+}
+[2023-01-15T17:03:09.811] [WARN] warnings - {
+  message: 'Route not found',
+  url: '/class=%22table-img%22',
+  method: 'GET'
+}
